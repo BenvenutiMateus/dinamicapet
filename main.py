@@ -39,7 +39,7 @@ FASES = {
     },
     6 : {
         "titulo": "Fase 6",
-        "desafio": "Resolva a equação:",
+        "desafio": "Prove que a soma dos resíduos ponderados com valores ajustados correspondentes é sempre zero:",
         "senha" : st.secrets.senha_fase_6,
     },
     7 : {
@@ -54,7 +54,7 @@ FASES = {
         "titulo": "Fase 8",
         "desafio": "Adivinhe a regra do jogo!",
         "senha" : st.secrets.senha_fase_8,
-        "dica" : "Use a regra do trapézio para aproximar a integral:",
+        "dica" : "Peça a um integrante ",
     }
 }
 
