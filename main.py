@@ -48,7 +48,7 @@ No final, a paz prevaleceu. A Rainha, com sua sabedoria, organizou um banquete o
     },
     5: {
         "titulo": "Fase 5",
-        "desafio": "A próxima senha é a minha maior vitória diária. Graças a Deus consegui acertar na 15ª tentativa hoje!",
+        "desafio": "Contextualizando vocês, a próxima fase é um jogo diário. Graças a Deus consegui acertar na 15ª tentativa hoje!",
         "senha" : st.secrets.senha_fase_5,
 					"dica" : "Contextualizando vocês, a resposta da pergunta é a resposta de um jogo diário"
     },
