@@ -44,7 +44,7 @@ FASES = {
     },
     7 : {
         "titulo": "Fase 7",
-        "desafio": "Encontre a raiz da função abaixo, dados os valores iniciais x₀ = 0.4 e x₁ = 0.6 com 5 iterações :",
+        "desafio": "Encontre a raiz da função abaixo, dados os valores iniciais sem bisseção e Newton-Raphson: x₀ = 0.4 e x₁ = 0.6 com 5 iterações :",
         "formula": r"f(x) = \ln(x^2+1) \cdot \sin(5x) - \frac{x}{5}",
         "senha" : st.secrets.senha_fase_7,
         "dica" : "Use a fórmula da Secante para encontrar a raiz da função:",
