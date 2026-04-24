@@ -19,7 +19,7 @@ FASES = {
         "titulo": "Fase 2",
         "desafio": "Palavra cruzada",
         "senha" : st.secrets.senha_fase_2,
-        "dica" : "Ordem das perguntas: 3, 5, 7, 1, 6, 4, 2"
+        "dica" : "Ordem das dicas: 3, 5, 7, 1, 6, 4, 2"
     },
     3: {
         "titulo": "Fase 3",
@@ -43,7 +43,8 @@ Para proteger o reino, o Rei consultou o Mestre das Armas, um homem que conhecia
 
 No final, a paz prevaleceu. A Rainha, com sua sabedoria, organizou um banquete onde serviram 9 taças de cristal com o melhor vinho do reino para os líderes das vilas. E assim, o Rei sábio e sua Rainha viveram felizes, sabendo que a união era sua maior riqueza.
 """,
-        "senha" : st.secrets.senha_fase_4
+        "senha" : st.secrets.senha_fase_4,
+					"dica" : "O Caio irá orientá-los"
     },
     5: {
         "titulo": "Fase 5",
@@ -82,7 +83,7 @@ def passou_10_minutos(fase_nome):
     start_time = st.session_state.get(f"start_time_{fase_nome}")
     if start_time is None:
         return False
-    return (time.time() - start_time) >= 6 # 600 segundos = 10 minutos
+    return (time.time() - start_time) >= 600 # 600 segundos = 10 minutos
 
 # Inicializar estado da sessão
 if "fase_atual" not in st.session_state:
