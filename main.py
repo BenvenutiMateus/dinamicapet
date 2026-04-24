@@ -29,7 +29,19 @@ FASES = {
     },
     4: {
         "titulo": "Fase 4",
-        "desafio": "asjkpdjaksjfaop",
+        "desafio": """
+Era uma vez, em um reino muito distante, um Rei sortudo que governava sob a proteção dos trevos de quatro folhas. Ele vivia em um castelo cercado por 10 familiares muito unidos, que o ajudavam a manter a prosperidade das terras.
+
+Certo dia, em uma viagem diplomática, o Rei encontrou uma Rainha apaixonada, cujos olhos brilhavam como o mais puro afeto. Foi amor à primeira vista, e o casal logo percebeu que suas vidas estavam entrelaçadas para sempre.
+
+Para celebrar a união, o Rei enviou seu mais ágil mensageiro, conhecido por carregar as moedas reais. O mensageiro deveria levar 5 sacos de ouro para cada província, como símbolo de generosidade.
+
+Porém, o caminho era perigoso. O reino vizinho, governado pelo medo, enviou um soldado solitário armado com uma lança afiada para impedir a festa. Esse soldado era acompanhado por 8 espiões que se escondiam nas sombras das montanhas.
+
+Para proteger o reino, o Rei consultou o Mestre das Armas, um homem que conhecia todas as estratégias de combate. Ele forjou 4 espadas mágicas para os cavaleiros da guarda. 
+
+No final, a paz prevaleceu. A Rainha, com sua sabedoria, organizou um banquete onde serviram 9 taças de cristal com o melhor vinho do reino para os líderes das vilas. E assim, o Rei sábio e sua Rainha viveram felizes, sabendo que a união era sua maior riqueza.
+""",
         "senha" : st.secrets.senha_fase_4
     },
     5: {
