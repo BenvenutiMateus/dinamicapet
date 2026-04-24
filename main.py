@@ -52,22 +52,9 @@ No final, a paz prevaleceu. A Rainha, com sua sabedoria, organizou um banquete o
         "senha" : st.secrets.senha_fase_5,
 					"dica" : "Contextualizando vocês, a resposta da pergunta é a resposta de um jogo diário"
     },
+    
     6 : {
         "titulo": "Fase 6",
-        "desafio": "Prove que a soma dos resíduos ponderados com valores ajustados correspondentes é sempre zero:",
-        "senha" : st.secrets.senha_fase_6,
-					"dica" : "Dudu irá orientá-los"
-    },
-    7 : {
-        "titulo": "Fase 7",
-        "desafio": "Encontre a raiz da função abaixo, dados os valores iniciais sem bisseção e Newton-Raphson: x₀ = 0.4 e x₁ = 0.6 com 5 iterações :",
-        "formula": r"f(x) = \ln(x^2+1) \cdot \sin(5x) - \frac{x}{5}",
-        "senha" : st.secrets.senha_fase_7,
-        "dica" : "Use a fórmula da Secante para encontrar a raiz da função:",
-        "dica_formula": r"x_2 = x_1 - \frac{f(x_1) x_0 - f(x_0) x_1}{f(x_1) - f(x_0)}"
-    },
-    8 : {
-        "titulo": "Fase 8",
         "desafio": "Adivinhe a regra do jogo!",
         "senha" : st.secrets.senha_fase_8,
         "dica" : "Peça a um integrante ",
@@ -134,16 +121,7 @@ else:
 
     resposta = st.text_input("Sua resposta:", key=f"resposta_{st.session_state.fase_atual}").lower().strip()
     senha = fase['senha']
-    # Para as fases 7 e 8, permitir tolerância numérica
-    if st.session_state.fase_atual in [6, 7]:
-        try:
-            resposta_num = float(resposta.replace(',', '.'))
-            senha_num = float(str(senha).replace(',', '.'))
-            correto = abs(resposta_num - senha_num) < 1e-3
-        except Exception:
-            correto = False
-    else:
-        correto = resposta == str(senha).lower().strip()
+    correto = resposta == str(senha).lower().strip()
 
     if st.button("Verificar Resposta"):
         if correto:
