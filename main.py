@@ -19,12 +19,13 @@ FASES = {
         "titulo": "Fase 2",
         "desafio": "Palavra cruzada",
         "senha" : st.secrets.senha_fase_2,
-        "dica" : "teste"
+        "dica" : "Ordem das perguntas: 3, 5, 7, 1, 6, 4, 2"
     },
     3: {
         "titulo": "Fase 3",
         "desafio": "🔎📕",
-        "senha" : st.secrets.senha_fase_3
+        "senha" : st.secrets.senha_fase_3,
+					"dica" : "p, l, p"
         
     },
     4: {
@@ -47,12 +48,14 @@ No final, a paz prevaleceu. A Rainha, com sua sabedoria, organizou um banquete o
     5: {
         "titulo": "Fase 5",
         "desafio": "A próxima senha é a minha maior vitória diária. Graças a Deus consegui acertar na 15ª tentativa hoje!",
-        "senha" : st.secrets.senha_fase_5
+        "senha" : st.secrets.senha_fase_5,
+					"dica" : "Contextualizando vocês, a resposta da pergunta é a resposta de um jogo diário"
     },
     6 : {
         "titulo": "Fase 6",
         "desafio": "Prove que a soma dos resíduos ponderados com valores ajustados correspondentes é sempre zero:",
         "senha" : st.secrets.senha_fase_6,
+					"dica" : "Dudu irá orientá-los"
     },
     7 : {
         "titulo": "Fase 7",
@@ -79,7 +82,7 @@ def passou_10_minutos(fase_nome):
     start_time = st.session_state.get(f"start_time_{fase_nome}")
     if start_time is None:
         return False
-    return (time.time() - start_time) >= 600 # 600 segundos = 10 minutos
+    return (time.time() - start_time) >= 6 # 600 segundos = 10 minutos
 
 # Inicializar estado da sessão
 if "fase_atual" not in st.session_state:
