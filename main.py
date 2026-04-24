@@ -1,6 +1,8 @@
+# Adiciona pytz para controle de fuso horário
 import streamlit as st
 import time
 import datetime
+import pytz
 # Função para iniciar o timer de uma fase
 
 
@@ -10,7 +12,7 @@ FASES = {
     1: {
         "titulo": "Fase 1",
         "desafio": "",
-        "senha" : datetime.datetime.now().strftime("%H:%M"),
+        "senha" : datetime.datetime.now(pytz.timezone("America/Sao_Paulo")).strftime("%H:%M"),
         "dica" : "-... .- .-.. .- ---"
     },
     2: {
@@ -116,7 +118,6 @@ else:
 
     resposta = st.text_input("Sua resposta:", key=f"resposta_{st.session_state.fase_atual}").lower().strip()
     senha = fase['senha']
-    st.write(senha)
     # Para as fases 7 e 8, permitir tolerância numérica
     if st.session_state.fase_atual in [6, 7]:
         try:
